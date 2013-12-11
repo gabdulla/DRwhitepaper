@@ -519,6 +519,160 @@ job scheduling were both high interest and impact. Load migration, back-up
 scheduling, fine grained power management and thermal management were medium
 interest and impact. Lighting control and back-up resources were low
 interest and impact.
+
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|p{299pt}|}
+\hline
+\textbf{HPC strategies for responding to Electricity Provider requests (listed from highest to lowest interest }$+$\textbf{ impact)} \\
+\hline
+Course grained power management \\
+\hline
+Facility shutdown \\
+\hline
+Job scheduling \\
+\hline
+Load migration \\
+\hline
+Re-scheduling back-ups \\
+\hline
+Fine grained power management \\
+\hline
+Temperature control beyond ASHRAE limits \\
+\hline
+Turn off lighting \\
+\hline
+Use back-up resources (e.g., generators) \\
+\hline
+\end{tabular}
+\label{tab1}
+\end{center}
+\end{table}
+
+
+
+\section{Opportunities/Solutions and Barriers} 
+
+[koenig -- 01-NOV-2013] These are things I think this section should
+include:
+
+\begin{enumerate}
+\item Link the beginning of this section to the end of the previous (Survey Results) section by suggesting that the biggest ``opportuni
+ty'' is to start a process of negotiation/interaction between utility providers and HPC centers; the survey data seems to indicate that
+ this is being asked for by providers, at least in some small way already
+\item opportunities related to system software
+        \begin{itemize}
+        \item If negotiation starts happening between utility providers and HPC center operators, the system software (i.e., job schedu
+ler) is a key component in order to ensure that this happens as efficiently as possible in order to keep high utilization / business ut
+ility going at the HPC center (consider here things such as fluctuations in HPC use; e.g., things like large-scale acceptance / Top500
+style runs)
+        \item just lowering the power consumption of a batch job (i.e., by using fine grained power management techniques) does not ens
+ure that the overall energy consumption is reduced; need some kind of knowledge about the workflow in the organization to make these ki
+nds of determinations
+        \item in addition to the advanced reservation capabilities discussed in the three paragraphs above, other areas where system so
+ftware can participate are
+                \begin{itemize}
+                \item power capping
+                \item temperature adjustment within the datacenter (make reference to discussion on Page 6)
+                \item load migration - requires cooperation by HPC centers; also, migrating large datasets is hard
+                \end{itemize}
+        \item need to expose ``knobs'' into the system software so that HPC facility managers can easily adjust the objectives that the
+ system software is using to make decisions because the overall number of ways of scheduling a workflow makes the problem too hard to r
+eadily solve by hand
+        \end{itemize}
+\item if there is some kind of automated ``negotiation'' process that takes place between utility providers and HPC centers, it's likel
+y that the utility providers will need to improve their capabilities to be able to participate in this process (e.g., probably need to
+solve some kind of weighted optimization problem in near real time in order to know where the most important places are to ensure unint
+errupted service); there is an opportunity to the utility provider in this, however, in that these advancements in their technology for
+ monitoring and adjusting their infrastructure might be leveraged toward other ends that are not related to HPC centers specifically
+\end{enumerate}
+
+
+\section{Conclusions and Next Steps}
+
+\begin{enumerate}
+\item Potential HPC-specific value proposition for active DR engagement
+\item Based on Grid Integration solutions -- local and system-wide impacts
+\item Next steps -- specific directions or target areas to focus
+\end{enumerate}
+
+Electricity providers have viewed the hourly, daily, and seasonal
+fluctuations of demand as facts of life. These fluctuations required
+additional generating capacity, particularly peaking plants that were needed
+only a few hours per year.
+
+DR adoption: automation
+
+automation technologies
+
+DR market:
+
+value proposition,
+
+the measurement and verification models,
+
+patents,
+
+intellectual property
+
+lighting, and heating, ventilation, and air conditioning (HVAC)
+
+electricity-price markets
+
+interoperability
+
+The grid integration need to be standardized and provide interoperable
+interfaces to be interoperable. Interfaces, communication infrastructure,
+data, information exchange, agreement should be based on standards.
+Communication with grid providers need to be standardized. grid
+request/response messages. Requests include DR event, price, renewable
+generation
+
+How is architected an accounting system (energy and utilization) of an HPC
+center? based on sensor systems like in [Hay09]. Sensor systems for an HPC
+center to report real time power consumption of various components such as
+cooling, compute systems, storage, networks, racks, etc.
+
+[Hay09] S. Hay and A. Rice, ``The case for apportionment,'' in Proceedings
+of the First ACM Workshop on Embedded Sensing Systems for Energy-Efficiency
+in Buildings, New York, NY, USA, 2009, pp. 13--18.
+
+Apportioning the total energy consumption of a building or organisation to
+individual users may provide incentives to make reductions. We explore how
+sensor systems installed in many buildings today can be used to apportion
+energy consumption between users. We investigate the differences between a
+number of possible policies to evaluate the case for apportionment based on
+energy and usage data collected over the course of a year. We also study the
+additional possibilities offered by more fine-grained data with reference to
+case studies for specific shared resources, and discuss the potential and
+challenges for future sensor systems in this area.
+
+\begin{itemize}
+\item If accounting data can be used to forecast and model future energy usage of an HPC center? so this can be communicated and be in
+egrated with electricity grid.
+\item If/how electricity grid providers can use energy and usage accounting data to plan electricity provisioning of an HPC center?
+\item user-specific accounting data versus workload-specific accounting data.
+\item accounting data in terms of HPC center components, cooling, systems, lighting, etc.
+\end{itemize}
+These are excellent questions. What you've outlined below is a set of value
+of real-time data (the term "accounting" confused me earlier) of energy and
+utilization for HPC systems. Some of these values are for EE and the rest is
+how the electric grid service providers can benefit from it. For example,
+telemetry data for wholesale DR markets and M{\&}V.
+
+M{\&}V or Measurement and Verification refers to quantification of load shed
+that a particular load is participating in. Typically, there are many
+baseline methodologies that the utilities and ISOs use to calculate the
+amount of DR a particular load/facility is providing through real-time and
+day-ahead metered data. The metering and telemetry to provide the M{\&}V is
+key in determining if a particular resource can participate in a DR market
+and validate its performance for settlement (economics).
+
+\newpage
+
+\section{References}
+
 ==============================
 
 \begin{table}
