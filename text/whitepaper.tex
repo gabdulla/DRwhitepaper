@@ -226,7 +226,8 @@ set of jobs with loose service level guarantees or low priority }that can be
 forced to reduce consumption when the data center is approaching \textbf{the
 power cap value}. Power consumption can be reduced simply by
 \textbf{de-scheduling tasks }or by using any available component-level power
-management \textbf{knobs}, such as DVFS [Fan07].
+management \textbf{knobs}, such as DVFS [Fan07]
+.
 
 \subsection{Job Scheduling}
 The problem of scheduling jobs has been extensively studied. In general,
@@ -237,7 +238,7 @@ from low system utilization. The most commonly used optimization is backfill
 utilization. Backfilling by identifying free capacities allows the smaller
 jobs fit those capacities to move forward and run on idle processors.
 
-In [Yang13] and [Zhou13], \textbf{job scheduling} as a DR strategy and
+In [Yang13] and [Zhou13] , \textbf{job scheduling} as a DR strategy and
 \textbf{dynamic pricing} as a grid integration program have been used to
 propose \textbf{a power-aware job scheduling} approach to reduce
 \textbf{electricity costs} \textit{without degrading the system utilization}. 
@@ -252,7 +253,8 @@ results show a \textbf{23{\%}} reduction in electricity cost of HPC systems.
 
 A grid computing infrastructure with large amount of computations normally
 contains parallel machines (supercomputers cluster) as main computational
-resources [Fos01]. Incoming jobs to Grid's local resources are scheduled by
+resources [Fos01]
+. Incoming jobs to Grid's local resources are scheduled by
 local scheduling system. Local scheduling system for parallel machines
 typically use batch queued space-sharing and its variants as scheduling
 policies. Most current local schedulers use backfilling strategies with FCFS
@@ -302,7 +304,8 @@ job-placement-centric. These techniques either aim to place incoming
 computationally intensive jobs in a thermal-aware manner on servers with
 lower temperatures or attempt to reactively migrate/load-balance jobs from
 high temperature servers to servers with lower temperatures.
-\textbf{\textit{T* }}[Kau12] takes a data-centric thermal- and
+\textbf{\textit{T* }} [Kau12]
+ takes a data-centric thermal- and
 energy-management approach and does proactive, thermal-aware file placement
 which allows cooling energy costs savings without performance trade-offs. T*
 is cognizant of the uneven thermal-profile of the servers, differences in
@@ -313,10 +316,11 @@ spans, of the big data placed in the cluster.
 In this paper, we assume that the grid is a given constant as a fundamental
 property. But, grid integration solutions may take into consideration that
 it isn't a given as electrical grid infrastructures will evolve in the
-future [He08]. Thus, changes in the grid could make grid integration more or
+future [He08]
+. Thus, changes in the grid could make grid integration more or
 less difficult.
 
-In [Aik11], authors explored the potential for HPC centers to adapt to
+In [Aik11] , authors explored the potential for HPC centers to adapt to
 dynamic electrical prices, variation in carbon intensity within an
 electrical grid, or availability of local renewables. Through simulations
 experiments on workloads from the Parallel Workloads Archive alongside
@@ -361,6 +365,7 @@ was due to preventative maintenance.
 
 
 \begin{table}[htbp]
+
 \begin{center}
 \begin{tabular}{|p{65pt}|l|l|}
 \hline
@@ -423,6 +428,7 @@ demand of electricity. About half of them have had some discussion, but it
 has mostly been limited to programs and not methods.
 
 \begin{table}[htbp]
+
 \begin{center}
 \begin{tabular}{|p{230pt}|l|}
 \hline
@@ -478,6 +484,7 @@ Eighty percent of the respondents have not had discussions with their
 electricity service providers about congestion, regulation and frequency
 response. LANL is one of two who have had discussions and who commented that
 they are ``learning about the process'' and that it is ``outside of [their]
+
 visibility or control''.
 
 There were been many more respondents who have had discussions with their
@@ -522,6 +529,7 @@ interest and impact.
 
 
 \begin{table}[htbp]
+
 \begin{center}
 \begin{tabular}{|p{299pt}|}
 \hline
@@ -630,7 +638,7 @@ request/response messages. Requests include DR event, price, renewable
 generation
 
 How is architected an accounting system (energy and utilization) of an HPC
-center? based on sensor systems like in [Hay09]. Sensor systems for an HPC
+center? based on sensor systems like in [Hay09] . Sensor systems for an HPC
 center to report real time power consumption of various components such as
 cooling, compute systems, storage, networks, racks, etc.
 
@@ -671,64 +679,62 @@ and validate its performance for settlement (economics).
 
 \newpage
 
-\section{References}
 
-==============================
 
-\begin{table}
-\caption{This is the example table taken out of {\it The
-\TeX{}book,} p.\,246}
-\begin{center}
-\begin{tabular}{r@{\quad}rl}
-\hline
-\multicolumn{1}{l}{\rule{0pt}{12pt}
-                   Year}&\multicolumn{2}{l}{World 
-population}\\[2pt]
-\hline\rule{0pt}{12pt}
-8000 B.C.  &     5,000,000& \\
-  50 A.D.  &   200,000,000& \\
-1650 A.D.  &   500,000,000& \\
-1945 A.D.  & 2,300,000,000& \\
-1980 A.D.  & 4,400,000,000& \\[2pt]
-\hline
-\end{tabular}
-\end{center}
-\end{table}
 %
 
 %
 % ---- Bibliography ----
 %
-\begin{thebibliography}{5}
+\begin{thebibliography}{3}
 %
-\bibitem {clar:eke}
-Clarke, F., Ekeland, I.:
-Nonlinear oscillations and
-boundary-value problems for Hamiltonian systems.
-Arch. Rat. Mech. Anal. 78, 315--333 (1982)
+\bibitem {He08}
+He, M. M., Reutzel, E. M., Jiang, X., Katz, Y. H., S, S. R., Culler, D. E.:
+An Architecture for Local Energy Generation, Distribution, and Sharing. 
+IEEE Energy2030 Conference Proceedings, Atlanta, Georgia, USA., (2008)
 
-\bibitem {clar:eke:2}
-Clarke, F., Ekeland, I.:
-Solutions p\'{e}riodiques, du
-p\'{e}riode donn\'{e}e, des \'{e}quations hamiltoniennes.
-Note CRAS Paris 287, 1013--1015 (1978)
+\bibitem {Fos01}
+ Foster, I.:
+The Anatomy of the Grid: Enabling Scalable Virtual Organizations.
+\textit{First IEEE/ACM International Symposium on Cluster Computing and the Grid, 2001. Proceedings}, 6--7,
+10.1109/CCGRID.2001.923162 (2001).
 
-\bibitem {mich:tar}
-Michalek, R., Tarantello, G.:
-Subharmonic solutions with prescribed minimal
-period for nonautonomous Hamiltonian systems.
-J. Diff. Eq. 72, 28--55 (1988)
+\bibitem {Lif95}
+Lifka, David A.:
+The ANL/IBM SP Scheduling System.
+\textit{In Job Scheduling Strategies for Parallel Processing}, 295--303.  Springer-Verlag, 1995.
 
-\bibitem {tar}
-Tarantello, G.:
-Subharmonic solutions for Hamiltonian
-systems via a $\bbbz_{p}$ pseudoindex theory.
-Annali di Matematica Pura (to appear)
 
-\bibitem {rab}
-Rabinowitz, P.:
-On subharmonic solutions of a Hamiltonian system.
-Comm. Pure Appl. Math. 33, 609--633 (1980)
+\bibitem {Mua95}
+Mu'alem, Ahuva W., and Dror G. Feitelson:
+Utilization, Predictability, Workloads, and User Runtime Estimates in Scheduling the IBM SP2 with Backfilling.
+\textit{IEEE Trans. Parallel Distrib. Syst.} 12, no. 6 (June 2001): 529--543.
+doi:10.1109/71.932708.
+
+\bibitem {Fei04}
+Feitelson, Dror G., Uwe Schwiegelshohn, and Larry Rudolph:
+Parallel Job Scheduling - A Status Report.''
+\textit{In Lecture Notes in Computer Science}, 1--16. Springer-Verlag, 2004.
+
+\bibitem {Fan07}
+X. Fan, W. Weber, and L. A. Barroso:
+Power Provisioning for a Warehouse-sized Computer.
+\textit{In Proceedings of ISCA}, 2007.
+
+\bibitem {Fos99}
+Foster, I., C. Kesselman, C. Lee, B. Lindell, K. Nahrstedt, and A.  Roy:
+A Distributed Resource Management Architecture That Supports Advance Reservations and Co-allocation.
+\textit{1999 Seventh International Workshop on Quality of Service, 1999. IWQoS '99}, 27--36, 1999.
+doi:10.1109/IWQOS.1999.766475.
+
+\bibitem {Cza99}
+Czajkowski, K., I. Foster, and C. Kesselman:
+Resource Co-allocation in Computational Grids.
+\textit{The Eighth International Symposium on High Performance Distributed Computing, 1999. Proceedings}, 219--228, 1999.
+doi:10.1109/HPDC.1999.805301.
+
+
+%==================================
 
 \end{thebibliography}
 
