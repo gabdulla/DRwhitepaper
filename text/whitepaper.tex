@@ -143,10 +143,10 @@ is the largest-capacity form of grid energy storage.
 \item Regulation (Up or Down): Methods used to maintain that portion of electricity generation reserves 
 that are needed to balance generation and demand at all times.
 \item Congestion: Methods used to resolve congestion that occurs when there is not enough transmission capability to 
-support all requests for transmission services. Or, methods used to resolve congestion that occurs when the distributio
+support all requests for transmission services. Or, methods used to resolve congestion that occurs when the distribution.
 \end{itemize}
 
-\subsection{Supercomputer Center Strageties}
+\subsection{Supercomputer Center Strategies}
 
 Another dimension of the model is a list of strategies that a supercomputer
 site might use for managing power in response to a request from their
@@ -169,7 +169,7 @@ Below is a list of strategies:
 and energy with tools that are high resolution control and can target specific 
 low level sub-systems. A typical example is voltage and frequency scaling of the CPU.
 
-\item Course grained power management also refers to the ability to control HPC 
+\item Coarse grained power management also refers to the ability to control HPC 
 system power and energy, but contrasts with fine grained power management in 
 that the resolution is low and it is generally done at a more aggregated level. 
 A typical example is power capping.
@@ -265,12 +265,7 @@ resources
 local scheduling system. Local scheduling system for parallel machines
 typically use batch queued space-sharing and its variants as scheduling
 policies. Most current local schedulers use backfilling strategies with FCFS
-queue-priority order as policy for parallel job scheduling. In the US,
-supercomputer centers are connected via grid computing infrastructures such
-as TeraGrid, Open Science Grid. Grid computing's protocols, interfaces, and
-standards can facilitate the execution of DR strategies, as a result grid
-computing may increase the interest level and/or the impact level of DR
-strategies.
+queue-priority order as policy for parallel job scheduling.
 
 There are many use cases in grid computing environment that require QoS
 guarantees in terms of guaranteed response time, including time-critical
@@ -282,23 +277,18 @@ certain amount of resources to users and applications at specific times in
 the future 
 \cite{foster_distributed_1999} [Fos99]. Advance reservation feature requires local scheduling
 systems to support a reservation capability beside batch queued policy for
-local and normal jobs. In load migration, we encounter the need to deliver
+local and normal jobs. Modern resource management
+and scheduling systems such as Sun Grid Engine, PBS, OpenPBS, Torque, Maui,
+and Moab support backfilling and advance reservation capabilities.
+
+\subsection{Load Migration}
+
+In load migration, we encounter the need to deliver
 resources at specific times in order to accept jobs from other HPC centers
 to respond to their demand enforced by electricity grid. This requirement
 can be achieved by advance reservations 
 \cite{foster_distributed_1999}
-[Fos99]. Modern resource management
-and scheduling systems such as Sun Grid Engine, PBS, OpenPBS, Torque, Maui,
-and Moab support backfilling and advance reservation capabilities.
-
-By using \textit{advance reservation capabilities }of schedulers 
-(within local resource managers) of HPC centers, we
-facilitate \textit{the execution of load migration strategy }between 
-HPC centers (e.g., in terms of automation); as a result
-we increase the interest level and to some extent the impact level of load
-migration strategies.
-
-\subsection{Load Migration}
+[Fos99]. 
 
 In order to balance the electrical grid,
 \cite{chiu_electric_2012}
@@ -380,10 +370,6 @@ intra-hour fluctuation varied from less than 3MW to 8MW. One of
 \textasciitilde 5MW sites said that they experienced 4MW variability. The
 rest of the sites were all less than 3MW. Most of the intra-hour variability
 was due to preventative maintenance.
-
-
-
-
 
 \begin{table}[htbp]
 
@@ -537,7 +523,7 @@ the supercomputer centers are currently using any power management
 strategies to respond to grid requests by their electrical service
 providers. SDSC's \textit{supercomputer center} is not an exception, but they did respond that their
 entire ``campus is leveraging parallel electrical distribution to trigger
-diesel generators and other back-up resources to respond to to grid and
+diesel generators and other back-up resources to respond to grid and
 non-grid requests.''
 
 We tried to evaluate if power management strategies will be considered
@@ -559,7 +545,7 @@ interest and impact.
 \hline
 \textbf{HPC strategies for responding to Electricity Provider requests (listed from highest to lowest interest }$+$\textbf{ impact)} \\
 \hline
-Course grained power management \\
+Coarse grained power management \\
 \hline
 Facility shutdown \\
 \hline
@@ -582,9 +568,40 @@ Use back-up resources (e.g., generators) \\
 \end{center}
 \end{table}
 
+\section{Opportunities/Solutions and Barriers}
+%negotiation/interaction 
+The biggest opportunity in the integration of the electrical grid and supercomputer centers is to start a process of negotiation/interaction between utility providers and HPC centers; the survey data indicates that this is being asked for by providers, at least in some small way already.
 
+%system software
+There are great opportunities related to system software. System software in these areas consist of job scheduling, power capping, temperature adjustment within the datacenter, load migration, etc.
 
-\section{Opportunities/Solutions and Barriers} 
+If negotiation starts happening between utility providers and HPC center operators, the system software (i.e., job scheduler) is a key component in order to ensure that this happens as efficiently as possible in order to keep high utilization / business utility going at the HPC center (consider here things such as fluctuations in HPC use; e.g., things like large-scale acceptance / Top500 style runs). Load migration requires cooperation by HPC centers; also, migrating large datasets is hard. By using \textit{advance reservation capabilities} of schedulers (within local resource managers) of HPC centers, we facilitate \textit{the execution of load migration strategy} between HPC centers (e.g., in terms of automation); as a result we increase the interest level and to some extent the impact level of load migration strategies.
+
+%infrastructure software
+In addition to system software, infrastructure software such as grid computing may have a place in opportunities. In the US, supercomputer centers are connected via grid computing infrastructures such as TeraGrid, Open Science Grid. Grid computing's protocols, interfaces, and standards can facilitate the execution of DR strategies, as a result grid computing may increase the interest level and/or the impact level of DR strategies.
+
+If there is some kind of automated ``negotiation'' process that takes place between utility providers and HPC centers, it's likely that the utility providers will need to improve their capabilities to be able to participate in this process (e.g., probably need to solve some kind of weighted optimization problem in near real time in order to know where the most important places are to ensure uninterrupted service); there is an opportunity to the utility provider in this, however, in that these advancements in their technology for monitoring and adjusting their infrastructure might be leveraged toward other ends that are not related to HPC centers specifically.
+
+%electricity-price markets
+%interoperability
+The HPC/electrical grid integration at the communication and message level need to be standardized and be interoperable. Interfaces, communication infrastructure, data, information exchange, and agreement should be based on standards.
+%Communication with grid providers need to be standardized. grid request/response messages. Requests include DR event, price, renewable generation
+
+%accouting
+Accounting data can be used to forecast and model future energy usage of an HPC center. So this can be communicated and be integrated with electricity grid. Accounting data can be classified in terms of HPC center components, cooling, systems, lighting, etc. If/how electricity grid providers can use energy and usage accounting data to plan electricity provisioning of an HPC center? %user-specific accounting data versus workload-specific accounting data.
+
+%grid methods like dynamic pricing
+The survey data indicates that grid programs are more 
+Literature review indicates grid methods like dynamic pricing are being integrated into HPC center strategies.
+
+%How is architected an accounting system (energy and utilization) of an HPC center? based on sensor systems like in [Hay09] . Sensor systems for an HPC center to report real time power consumption of various components such as cooling, compute systems, storage, networks, racks, etc. [Hay09] S. Hay and A. Rice, ``The case for apportionment,'' in Proceedings of the First ACM Workshop on Embedded Sensing Systems for Energy-Efficiency in Buildings, New York, NY, USA, 2009, pp. 13--18.
+
+%There is a need to expose ``knobs'' into the system software so that HPC facility managers can easily adjust the objectives that the system software is using to make decisions because the overall number of ways of scheduling a workflow makes the problem too hard to readily solve by hand.
+
+%\item just lowering the power consumption of a batch job (i.e., by using fine grained power management techniques) does not ensure that the overall energy consumption is reduced; need some kind of knowledge about the workflow in the organization to make these kinds of determinations
+ %       \item in addition to the advanced reservation capabilities discussed in the three paragraphs above, other areas where 
+  %              \end{itemize}
+
 
 [koenig -- 01-NOV-2013] These are things I think this section should
 include:
@@ -613,11 +630,7 @@ ftware can participate are
  system software is using to make decisions because the overall number of ways of scheduling a workflow makes the problem too hard to r
 eadily solve by hand
         \end{itemize}
-\item if there is some kind of automated ``negotiation'' process that takes place between utility providers and HPC centers, it's likel
-y that the utility providers will need to improve their capabilities to be able to participate in this process (e.g., probably need to
-solve some kind of weighted optimization problem in near real time in order to know where the most important places are to ensure unint
-errupted service); there is an opportunity to the utility provider in this, however, in that these advancements in their technology for
- monitoring and adjusting their infrastructure might be leveraged toward other ends that are not related to HPC centers specifically
+\item 
 \end{enumerate}
 
 
@@ -628,6 +641,15 @@ errupted service); there is an opportunity to the utility provider in this, howe
 \item Based on Grid Integration solutions -- local and system-wide impacts
 \item Next steps -- specific directions or target areas to focus
 \end{enumerate}
+
+Load forecasting is very important for power system operation and planning.
+Traditional load forecasting tools have limitations to reflect DR customer
+behaviors into load predictions. In [Zhou12], existing DR contracts are
+reviewed for both wholesale and retail markets. In this study, an
+illustrative example is provided to explore the impact of these contracts on
+load forecasting. In conclusion, a concept of proactive load forecasting
+based on contract types is proposed for forecasting loads in a smart grid
+environment.
 
 Electricity providers have viewed the hourly, daily, and seasonal
 fluctuations of demand as facts of life. These fluctuations required
@@ -650,57 +672,6 @@ intellectual property
 
 lighting, and heating, ventilation, and air conditioning (HVAC)
 
-electricity-price markets
-
-interoperability
-
-The grid integration need to be standardized and provide interoperable
-interfaces to be interoperable. Interfaces, communication infrastructure,
-data, information exchange, agreement should be based on standards.
-Communication with grid providers need to be standardized. grid
-request/response messages. Requests include DR event, price, renewable
-generation
-
-How is architected an accounting system (energy and utilization) of an HPC
-center? based on sensor systems like in [Hay09] . Sensor systems for an HPC
-center to report real time power consumption of various components such as
-cooling, compute systems, storage, networks, racks, etc.
-
-[Hay09] S. Hay and A. Rice, ``The case for apportionment,'' in Proceedings
-of the First ACM Workshop on Embedded Sensing Systems for Energy-Efficiency
-in Buildings, New York, NY, USA, 2009, pp. 13--18.
-
-Apportioning the total energy consumption of a building or organisation to
-individual users may provide incentives to make reductions. We explore how
-sensor systems installed in many buildings today can be used to apportion
-energy consumption between users. We investigate the differences between a
-number of possible policies to evaluate the case for apportionment based on
-energy and usage data collected over the course of a year. We also study the
-additional possibilities offered by more fine-grained data with reference to
-case studies for specific shared resources, and discuss the potential and
-challenges for future sensor systems in this area.
-
-\begin{itemize}
-\item If accounting data can be used to forecast and model future energy usage of an HPC center? so this can be communicated and be in
-egrated with electricity grid.
-\item If/how electricity grid providers can use energy and usage accounting data to plan electricity provisioning of an HPC center?
-\item user-specific accounting data versus workload-specific accounting data.
-\item accounting data in terms of HPC center components, cooling, systems, lighting, etc.
-\end{itemize}
-These are excellent questions. What you've outlined below is a set of value
-of real-time data (the term "accounting" confused me earlier) of energy and
-utilization for HPC systems. Some of these values are for EE and the rest is
-how the electric grid service providers can benefit from it. For example,
-telemetry data for wholesale DR markets and M{\&}V.
-
-M{\&}V or Measurement and Verification refers to quantification of load shed
-that a particular load is participating in. Typically, there are many
-baseline methodologies that the utilities and ISOs use to calculate the
-amount of DR a particular load/facility is providing through real-time and
-day-ahead metered data. The metering and telemetry to provide the M{\&}V is
-key in determining if a particular resource can participate in a DR market
-
-and validate its performance for settlement (economics).
 
 \newpage
 
@@ -758,14 +729,6 @@ will be compensated according to a non-market price defined in regulation.
 The size of curtailable power is of 10 MW for programmes without notice and
 3 MW for programmes with notice.
 
-Load forecasting is very important for power system operation and planning.
-Traditional load forecasting tools have limitations to reflect DR customer
-behaviors into load predictions. In [Zhou12], existing DR contracts are
-reviewed for both wholesale and retail markets. In this study, an
-illustrative example is provided to explore the impact of these contracts on
-load forecasting. In conclusion, a concept of proactive load forecasting
-based on contract types is proposed for forecasting loads in a smart grid
-environment.
 
 Modern hardware components such as processor, memory, disk and network offer
 feature sets (Burd and Brodersen, 1995) to support energy aware operations.
