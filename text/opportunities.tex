@@ -1,0 +1,34 @@
+
+[koenig -- 01-NOV-2013] These are things I think this section should
+include:
+
+\begin{enumerate}
+\item Link the beginning of this section to the end of the previous (Survey Results) section by suggesting that the biggest ``opportuni
+ty'' is to start a process of negotiation/interaction between utility providers and HPC centers; the survey data seems to indicate that
+ this is being asked for by providers, at least in some small way already
+\item opportunities related to system software
+        \begin{itemize}
+        \item If negotiation starts happening between utility providers and HPC center operators, the system software (i.e., job schedu
+ler) is a key component in order to ensure that this happens as efficiently as possible in order to keep high utilization / business ut
+ility going at the HPC center (consider here things such as fluctuations in HPC use; e.g., things like large-scale acceptance / Top500
+style runs)
+        \item just lowering the power consumption of a batch job (i.e., by using fine grained power management techniques) does not ens
+ure that the overall energy consumption is reduced; need some kind of knowledge about the workflow in the organization to make these ki
+nds of determinations
+        \item in addition to the advanced reservation capabilities discussed in the three paragraphs above, other areas where system so
+ftware can participate are
+                \begin{itemize}
+                \item power capping
+                \item temperature adjustment within the datacenter (make reference to discussion on Page 6)
+                \item load migration - requires cooperation by HPC centers; also, migrating large datasets is hard
+                \end{itemize}
+        \item need to expose ``knobs'' into the system software so that HPC facility managers can easily adjust the objectives that the
+ system software is using to make decisions because the overall number of ways of scheduling a workflow makes the problem too hard to r
+eadily solve by hand
+        \end{itemize}
+\item if there is some kind of automated ``negotiation'' process that takes place between utility providers and HPC centers, it's likel
+y that the utility providers will need to improve their capabilities to be able to participate in this process (e.g., probably need to
+solve some kind of weighted optimization problem in near real time in order to know where the most important places are to ensure unint
+errupted service); there is an opportunity to the utility provider in this, however, in that these advancements in their technology for
+ monitoring and adjusting their infrastructure might be leveraged toward other ends that are not related to HPC centers specifically
+\end{enumerate}

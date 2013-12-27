@@ -1,0 +1,87 @@
+
+The EE HPC WG Team took as their starting point a model developed by
+Lawrence Berkeley National Laboratory's Demand Reponse Research Center
+\href{http://drrc.lbl.gov/publications/demand-response-and-open-automated-demand-response-opportunities-data-centers}
+{http://drrc.lbl.gov/publications}
+ that describes ways in which data centers and electricity service
+providers may interact. This model describes programs that are used by the
+electricity service providers to encourage particular behaviors by their
+customers and methods used to balance the grid supply and demand of
+electricity. It also describes strategies that data centers might employ for
+managing their electricity and power requirements. The EE HPC WG Team
+adopted this model with slight tweaks to reflect the HPC environment (versus
+the general data center).
+
+\subsection{Electricity Provider Programs and Methods}
+Programs are used by the electricity service providers to encourage
+particular behaviors by their customers. Methods used to balance the grid
+supply and demand of electricity.
+
+Below is a list of programs and methods:
+
+
+\begin{itemize}
+\item Energy Efficiency: Programs used to reduce overall electricity consumption, generally but not always at times of
+ peak demand.
+\item Peak Shaving (shed): Programs used to reduce load during peak times, where the reduced load is not used at a 
+later time.
+\item Peak Shaving (shift): Programs where the load during peak times is moved to, typically, non-peak hours.
+\item Dynamic Pricing: Time varying pricing programs used to increase, shed or shift electricity consumption.
+\item Grid Scale Storage: Methods used to store electricity on a large scale. Pumped-storage hydroelectricity 
+is the largest-capacity form of grid energy storage.
+\item Renewable (off-site): Methods used to manage the variable uncertain generation nature of many renewable resources.
+\item Frequency response: Methods used to keep grid frequency constant and in-balance. Generators are typically used for frequency response.
+\item Regulation (Up or Down): Methods used to maintain that portion of electricity generation reserves 
+that are needed to balance generation and demand at all times.
+\item Congestion: Methods used to resolve congestion that occurs when there is not enough transmission capability to 
+support all requests for transmission services. Or, methods used to resolve congestion that occurs when the distributio
+\end{itemize}
+
+
+\subsection{Supercomputer Center Strageties}
+
+Another dimension of the model is a list of strategies that a supercomputer
+site might use for managing power in response to a request from their
+electric service provider.
+
+Although these strategies can be used for managing power in response to a
+request from an electric service provider, many of them could also be used
+for improving energy efficiency. It is the former that is of primary
+interest to this investigation. Two examples may help to clarify this
+distinction. Load migration is an example of a strategy that is well suited
+to responding to an electric service provider request, but is not likely to
+improve energy efficiency. Fine grained power management, on the other hand,
+is more likely to be used for improving energy efficiency than for
+responding to electric service provider requests.
+
+Below is a list of strategies:
+
+\begin{itemize}
+\item Fine grained power management refers to the ability to control HPC system power 
+and energy with tools that are high resolution control and can target specific 
+low level sub-systems. A typical example is voltage and frequency scaling of the CPU.
+
+\item Course grained power management also refers to the ability to control HPC 
+system power and energy, but contrasts with fine grained power management in 
+that the resolution is low and it is generally done at a more aggregated level. 
+A typical example is power capping.
+
+\item Load migration refers to temporarily shifting computing loads from 
+an HPC system in one site to a system in another location.
+
+\item Job scheduling refers to the ability to control HPC system power 
+by understanding the power profile of applications and queuing the 
+applications based on those profiles.
+
+\item Back-up scheduling refers to deferring data storage processes to off-peak periods.
+
+\item Shutdown refers to a graceful shutdown of idle HPC equipment. It usually 
+applies when there is redundancy.
+
+\item Lighting control allows for data center lights to be shutdown completely.
+
+\item Thermal management is widening temperature set-point ranges and 
+humidity levels for short periods.
+\end{itemize}
+
+
