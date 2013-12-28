@@ -1,0 +1,94 @@
+\begin{thebibliography}{10}
+
+\bibitem{aikema_electrical_2011}
+D.~Aikema and R.~Simmonds.
+\newblock Electrical cost savings and clean energy usage potential for {HPC}
+  workloads.
+\newblock In {\em 2011 {IEEE} International Symposium on Sustainable Systems
+  and Technology ({ISSST)}}, pages 1--6, 2011.
+
+\bibitem{chiu_electric_2012}
+D.~Chiu, C.~Stewart, and B.~{McManus}.
+\newblock Electric grid balancing through lowcost workload migration.
+\newblock {\em {SIGMETRICS} Perform. Eval. Rev.}, 40(3):48–52, Jan. 2012.
+
+\bibitem{dhiman_vgreen:_2009}
+G.~Dhiman, G.~Marchetti, and T.~Rosing.
+\newblock {vGreen:} a system for energy efficient computing in virtualized
+  environments.
+\newblock In {\em Proceedings of the 14th {ACM/IEEE} international symposium on
+  Low power electronics and design}, {ISLPED} '09, page 243–248, New York,
+  {NY}, {USA}, 2009. {ACM}.
+
+\bibitem{feitelson_parallel_2004}
+D.~G. Feitelson, U.~Schwiegelshohn, and L.~Rudolph.
+\newblock Parallel job scheduling - a status report.
+\newblock In {\em In Lecture Notes in Computer Science}, page 1–16.
+  Springer-Verlag, 2004.
+
+\bibitem{foster_anatomy_2001}
+I.~Foster.
+\newblock The anatomy of the grid: enabling scalable virtual organizations.
+\newblock In {\em First {IEEE/ACM} International Symposium on Cluster Computing
+  and the Grid, 2001. Proceedings}, pages 6--7, 2001.
+
+\bibitem{foster_distributed_1999}
+I.~Foster, C.~Kesselman, C.~Lee, B.~Lindell, K.~Nahrstedt, and A.~Roy.
+\newblock A distributed resource management architecture that supports advance
+  reservations and co-allocation.
+\newblock In {\em 1999 Seventh International Workshop on Quality of Service,
+  1999. {IWQoS} '99}, pages 27--36, 1999.
+
+\bibitem{he_architecture_2008}
+M.~M. He, E.~M. Reutzel, X.~Jiang, Y.~H. Katz, S.~R. S, and D.~E. Culler.
+\newblock An architecture for local energy generation, distribution, and
+  sharing.
+\newblock In {\em {IEEE} Energy2030 Conference Proceedings}, Atlanta, Georgia,
+  {USA}, Nov. 2008.
+
+\bibitem{kaushik_t*:_2012}
+R.~T. Kaushik and K.~Nahrstedt.
+\newblock T*: a data-centric cooling energy costs reduction approach for big
+  data analytics cloud.
+\newblock {SC} '12, page 52:1–52:11, Los Alamitos, {CA}, {USA}, 2012. {IEEE}
+  Computer Society Press.
+
+\bibitem{lifka_anl/ibm_1995}
+D.~A. Lifka.
+\newblock The {ANL/IBM} {SP} scheduling system.
+\newblock In {\em In Job Scheduling Strategies for Parallel Processing}, page
+  295–303. Springer-Verlag, 1995.
+
+\bibitem{mualem_utilization_2001}
+A.~W. Mu'alem and D.~G. Feitelson.
+\newblock Utilization, predictability, workloads, and user runtime estimates in
+  scheduling the {IBM} {SP2} with backfilling.
+\newblock {\em {IEEE} Trans. Parallel Distrib. Syst.}, 12(6):529–543, June
+  2001.
+
+\bibitem{torriti_demand_2010}
+J.~Torriti, M.~G. Hassan, and M.~Leach.
+\newblock Demand response experience in europe: Policies, programmes and
+  implementation.
+\newblock {\em Energy}, 35(4):1575--1583, Apr. 2010.
+
+\bibitem{varma_control-theoretic_2003}
+A.~Varma, B.~Ganesh, M.~Sen, S.~R. Choudhury, L.~Srinivasan, and B.~Jacob.
+\newblock A control-theoretic approach to dynamic voltage scheduling.
+\newblock In {\em Proceedings of the 2003 international conference on
+  Compilers, architecture and synthesis for embedded systems}, {CASES} '03,
+  page 255–266, New York, {NY}, {USA}, 2003. {ACM}.
+
+\bibitem{von_laszewski_power-aware_2009}
+G.~von Laszewski, L.~Wang, A.~Younge, and X.~He.
+\newblock Power-aware scheduling of virtual machines in {DVFS-enabled}
+  clusters.
+\newblock In {\em {IEEE} International Conference on Cluster Computing and
+  Workshops, 2009. {CLUSTER} '09}, pages 1--10, 2009.
+
+\bibitem{zhou_reducing_2013}
+Z.~Zhou, Z.~Lan, W.~Tang, and N.~Desai.
+\newblock Reducing energy costs for {IBM} blue {Gene/P} via power-aware job
+  scheduling.
+
+\end{thebibliography}
