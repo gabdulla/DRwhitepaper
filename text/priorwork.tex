@@ -1,4 +1,3 @@
-
 The prior work described in this paper is that which addresses strategies
 that HPC centers can take to manage power. A lot of work has been done on
 energy efficiency, some of which has an element of power management. But,
@@ -32,7 +31,7 @@ set of jobs with loose service level guarantees or low priority }that can be
 forced to reduce consumption when the data center is approaching \textbf{the
 power cap value}. Power consumption can be reduced simply by
 \textbf{de-scheduling tasks }or by using any available component-level power
-management \textbf{knobs}, such as DVFS [Fan07]
+management \textbf{knobs}, such as DVFS [Fan07].
 .
 
 \subsection{Job Scheduling}
@@ -70,12 +69,7 @@ resources
 local scheduling system. Local scheduling system for parallel machines
 typically use batch queued space-sharing and its variants as scheduling
 policies. Most current local schedulers use backfilling strategies with FCFS
-queue-priority order as policy for parallel job scheduling. In the US,
-supercomputer centers are connected via grid computing infrastructures such
-as TeraGrid, Open Science Grid. Grid computing's protocols, interfaces, and
-standards can facilitate the execution of DR strategies, as a result grid
-computing may increase the interest level and/or the impact level of DR
-strategies.
+queue-priority order as policy for parallel job scheduling.
 
 There are many use cases in grid computing environment that require QoS
 guarantees in terms of guaranteed response time, including time-critical
@@ -95,14 +89,6 @@ can be achieved by advance reservations
 [Fos99]. Modern resource management
 and scheduling systems such as Sun Grid Engine, PBS, OpenPBS, Torque, Maui,
 and Moab support backfilling and advance reservation capabilities.
-
-By using \textit{advance reservation capabilities }of schedulers 
-(within local resource managers) of HPC centers, we
-facilitate \textit{the execution of load migration strategy }between 
-HPC centers (e.g., in terms of automation); as a result
-we increase the interest level and to some extent the impact level of load
-migration strategies.
-
 
 \subsection{Load Migration}
 
