@@ -2,9 +2,21 @@
 The biggest opportunity in the integration of the electrical grid and supercomputer centers is to start a process of negotiation/interaction between utility providers and HPC centers; the survey data indicates that this is being asked for by providers, at least in some small way already.
 
 %system software
-According to the survey data and literature review, there are great opportunities related to system software. System software in these areas in the order of their interest and impact consist of power capping, job scheduling, load migration, fine grained power management, temperature adjustment, and backup scheduling.
+According to the survey data and literature review, the greatest opportunities are related
+to system software. System software in these areas in the order of their interest and impact 
+consist of coarse grained power management (power capping), job scheduling, load migration,
+rescheduling back-ups and 
+fine grained power management.
 
-If negotiation starts happening between utility providers and HPC center operators, the system software (i.e., job scheduler) is a key component in order to ensure that this happens as efficiently as possible in order to keep high utilization / business utility going at the HPC center (consider here things such as fluctuations in HPC use; e.g., things like large-scale acceptance / Top500 style runs). Load migration requires cooperation by HPC centers; also, migrating large datasets is hard. By using \textit{advance reservation capabilities} of schedulers (within local resource managers) of HPC centers, we facilitate \textit{the execution of load migration strategy} between HPC centers (e.g., in terms of automation); as a result we increase the interest level and to some extent the impact level of load migration strategies.
+If integration starts happening between utility providers and HPC centers, 
+the system software (i.e., job scheduler) is a key component in order to ensure that this happens
+as efficiently as possible in order to keep high utilization / business utility going at the
+HPC center.  (Consider here things such as fluctuations in HPC use; 
+e.g., things like large-scale acceptance / Top500 style runs). 
+Load migration requires cooperation between HPC centers (and also may require overcoming difficult
+challenges like migrating large 
+datasets, ensuring security requirements are met and porting tuned code). 
+By using \textit{advance reservation capabilities} of schedulers (within local resource managers) of HPC centers, we facilitate \textit{the execution of load migration strategy} between HPC centers (e.g., in terms of automation); as a result we increase the interest level and to some extent the impact level of load migration strategies.
 
 %infrastructure software
 In addition to system software, infrastructure software such as grid computing may have a place in opportunities. In the US, supercomputer centers are connected via grid computing infrastructures such as TeraGrid, Open Science Grid. Grid computing's protocols, interfaces, and standards can facilitate the execution of DR strategies, as a result grid computing may increase the interest level and/or the impact level of DR strategies.
