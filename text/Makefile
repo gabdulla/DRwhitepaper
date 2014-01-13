@@ -25,4 +25,4 @@ clean:
 	find . 	-name '*.bbl' -print  | xargs rm -f; \
 	find . 	-name '*.log' -print  | xargs rm -f; \
 	find . 	-name '*.out' -print  | xargs rm -f; \
-	rm whitepaper.pdf
+	rm -f whitepaper.pdf
